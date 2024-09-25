@@ -3,27 +3,27 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Testcases.Safelocklogin">
+      <class name="Testcases.AlreadyhaveanOTP">
         <methods>
           <include name="VERIFY_THAT_ALL_THE_PENDING_SYNC_EVENTS_SYNCED_SUCCESSFULLY"/>
-          <include name="VERIFY_THAT_USER_ABLE_TO_ENTER_THE_PASSWORD_ON_THE_PASSWORD_FIELD"/>
-          <include name="VERIFY_THAT_BLUETOOTH_IS_ENALBED_BY_CLICKING_ON_ALLOW_BUUTON"/>
-          <include name="setup"/>
-          <include name="VERIFY_THAT_USER_NAVIGATED_INTO_LOGIN_PAGE_AFTER_CLICKED_SUBMIT_BUTTON"/>
-          <include name="VERIFY_THAT_LOCK_OPENED_SUCCESSFILLY_AFTER_ENTERED_THE_OTP_By_Click_Submit_AND_STATUS_CHANGED_INTO_OPENED"/>
-          <include name="VERIFY_THAT_SAFELOCK_APP_LOGGED_IN_SUCCESSFULLY_BY_CLICK_ON_SUBMIT_BUTTON"/>
-          <include name="VERIFY_THAT_USER_NAVIAGETED_INTO_GET_OTP_SCREEN_SUCCESSFULLY"/>
-          <include name="VERIFY_THAT_USER_ABLE_TO_ENTER_THE_EMAIL_ID_WHEN_KEYBOARD_APPEARS_BY_DEFAULT"/>
-          <include name="VERIFY_THAT_SELECTED_LOCK_IS_SEARCHED_AND_CONNECTED_TO_THE_DEVICE"/>
-          <include name="VERIFY_THAT_USER_LOADED_WITH_OPEN_LOCK_PAGE_ALONG_WITH_CONTROLLER_DETAILS"/>
+          <include name="loadProperties"/>
+          <include name="VERIFY_THAT_LOCK_AUTOMATICALLY_CLOSED_AFTER_CONFIGURED_SECONDS_AND_STATUS_CHANGED_INTO_CLSOED"/>
+          <include name="setupMobileDriver"/>
           <include name="VERIFY_THAT_CREATED_ACCESS_IS_LISTED_IN_THE_ACCESS_PAGE"/>
           <include name="VERIFY_THAT_LOCATION_IS_ALLOWED_BY_CLICKING_ON_ALLOW_OPTION"/>
-          <include name="setupMobileDriver"/>
-          <include name="VERIFY_THAT_LOCK_AUTOMATICALLY_CLOSED_AFTER_CONFIGURED_SECONDS_AND_STATUS_CHANGED_INTO_CLSOED"/>
-          <include name="loadProperties"/>
+          <include name="VERIFY_THAT_USER_LOADED_WITH_OPEN_LOCK_PAGE_ALONG_WITH_CONTROLLER_DETAILS"/>
+          <include name="VERIFY_THAT_SELECTED_LOCK_IS_SEARCHED_AND_CONNECTED_TO_THE_DEVICE"/>
+          <include name="VERIFY_THAT_USER_NAVIGATED_INTO_LOGIN_PAGE_AFTER_CLICKED_SUBMIT_BUTTON"/>
+          <include name="VERIFY_THAT_LOCK_OPENED_SUCCESSFILLY_AFTER_ENTERED_THE_OTP_By_Click_Submit_AND_STATUS_CHANGED_INTO_OPENED"/>
+          <include name="VERIFY_THAT_USER_NAVIAGETED_INTO_GET_OTP_SCREEN_SUCCESSFULLY"/>
           <include name="VERIFY_THAT_SAFELOCK_USER_ENTER_THE_ACTIVATION_CODE_ON_ACTIVATION_FIELD"/>
+          <include name="VERIFY_THAT_SAFELOCK_APP_LOGGED_IN_SUCCESSFULLY_BY_CLICK_ON_SUBMIT_BUTTON"/>
+          <include name="VERIFY_THAT_USER_ABLE_TO_ENTER_THE_PASSWORD_ON_THE_PASSWORD_FIELD"/>
+          <include name="VERIFY_THAT_BLUETOOTH_IS_ENALBED_BY_CLICKING_ON_ALLOW_BUUTON"/>
+          <include name="VERIFY_THAT_USER_ABLE_TO_ENTER_THE_EMAIL_ID_WHEN_KEYBOARD_APPEARS_BY_DEFAULT"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- Testcases.Safelocklogin -->
+      </class> <!-- Testcases.AlreadyhaveanOTP -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

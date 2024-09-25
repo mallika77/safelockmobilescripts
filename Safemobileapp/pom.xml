@@ -3,7 +3,10 @@
   <groupId>Safemobileapp</groupId>
   <artifactId>Safemobileapp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+  <build>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+    <!-- other build configurations -->
+</build>
     <dependencies>
     <dependency>
       <groupId>junit</groupId>

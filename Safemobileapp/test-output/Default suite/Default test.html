@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/14</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Sep 24 18:37:27 IST 2024</td>
+<td>Started on:</td><td>Wed Sep 25 15:28:25 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (122 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (75 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,21 +75,26 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Testcases.Safelocklogin.setupMobileDriver()'><b>setupMobileDriver</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.setupMobileDriver()'><b>setupMobileDriver</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -109,43 +114,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div><a href='#' onClick='toggleBox("stack-trace602423811", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace602423811'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<div class='stack-trace' id='stack-trace602423811'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -165,31 +153,9 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
-<td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>16</td>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -199,15 +165,15 @@ Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c ca
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Testcases.Safelocklogin.loadProperties()'><b>loadProperties</b><br>Test class: Testcases.Safelocklogin</td>
+<td title='Testcases.AlreadyhaveanOTP.setup()'><b>setup</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
 <td></td>
-<td>-1727183247</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>-1727258305</td>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.setup()'><b>setup</b><br>Test class: Testcases.Safelocklogin</td>
+<td title='Testcases.AlreadyhaveanOTP.loadProperties()'><b>loadProperties</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
 <td></td>
-<td>-1727183247</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>-1727258305</td>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -217,21 +183,26 @@ Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c ca
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_ALL_THE_PENDING_SYNC_EVENTS_SYNCED_SUCCESSFULLY()'><b>VERIFY_THAT_ALL_THE_PENDING_SYNC_EVENTS_SYNCED_SUCCESSFULLY</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_LOCK_OPENED_SUCCESSFILLY_AFTER_ENTERED_THE_OTP_By_Click_Submit_AND_STATUS_CHANGED_INTO_OPENED()'><b>VERIFY_THAT_LOCK_OPENED_SUCCESSFILLY_AFTER_ENTERED_THE_OTP_By_Click_Submit_AND_STATUS_CHANGED_INTO_OPENED</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -251,43 +222,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1173340685", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1173340685'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace251520863", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace251520863'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -307,47 +261,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_USER_LOADED_WITH_OPEN_LOCK_PAGE_ALONG_WITH_CONTROLLER_DETAILS()'><b>VERIFY_THAT_USER_LOADED_WITH_OPEN_LOCK_PAGE_ALONG_WITH_CONTROLLER_DETAILS</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_LOCATION_IS_ALLOWED_BY_CLICKING_ON_ALLOW_OPTION()'><b>VERIFY_THAT_LOCATION_IS_ALLOWED_BY_CLICKING_ON_ALLOW_OPTION</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -367,43 +304,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1122233828", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1122233828'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1437988306", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1437988306'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -423,47 +343,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_SELECTED_LOCK_IS_SEARCHED_AND_CONNECTED_TO_THE_DEVICE()'><b>VERIFY_THAT_SELECTED_LOCK_IS_SEARCHED_AND_CONNECTED_TO_THE_DEVICE</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_USER_NAVIAGETED_INTO_GET_OTP_SCREEN_SUCCESSFULLY()'><b>VERIFY_THAT_USER_NAVIAGETED_INTO_GET_OTP_SCREEN_SUCCESSFULLY</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -483,43 +386,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1672598778", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1672598778'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1956415355", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1956415355'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -539,47 +425,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_SAFELOCK_USER_ENTER_THE_ACTIVATION_CODE_ON_ACTIVATION_FIELD()'><b>VERIFY_THAT_SAFELOCK_USER_ENTER_THE_ACTIVATION_CODE_ON_ACTIVATION_FIELD</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_ALL_THE_PENDING_SYNC_EVENTS_SYNCED_SUCCESSFULLY()'><b>VERIFY_THAT_ALL_THE_PENDING_SYNC_EVENTS_SYNCED_SUCCESSFULLY</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -599,43 +468,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1475192960", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1475192960'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace992086987", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace992086987'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -655,47 +507,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_LOCATION_IS_ALLOWED_BY_CLICKING_ON_ALLOW_OPTION()'><b>VERIFY_THAT_LOCATION_IS_ALLOWED_BY_CLICKING_ON_ALLOW_OPTION</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_USER_ABLE_TO_ENTER_THE_PASSWORD_ON_THE_PASSWORD_FIELD()'><b>VERIFY_THAT_USER_ABLE_TO_ENTER_THE_PASSWORD_ON_THE_PASSWORD_FIELD</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -715,43 +550,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace848097505", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace848097505'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1659515968", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1659515968'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -771,47 +589,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_LOCK_OPENED_SUCCESSFILLY_AFTER_ENTERED_THE_OTP_By_Click_Submit_AND_STATUS_CHANGED_INTO_OPENED()'><b>VERIFY_THAT_LOCK_OPENED_SUCCESSFILLY_AFTER_ENTERED_THE_OTP_By_Click_Submit_AND_STATUS_CHANGED_INTO_OPENED</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_CREATED_ACCESS_IS_LISTED_IN_THE_ACCESS_PAGE()'><b>VERIFY_THAT_CREATED_ACCESS_IS_LISTED_IN_THE_ACCESS_PAGE</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -831,43 +632,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1967496309", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1967496309'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1433208870", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1433208870'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -887,47 +671,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_USER_ABLE_TO_ENTER_THE_PASSWORD_ON_THE_PASSWORD_FIELD()'><b>VERIFY_THAT_USER_ABLE_TO_ENTER_THE_PASSWORD_ON_THE_PASSWORD_FIELD</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_USER_ABLE_TO_ENTER_THE_EMAIL_ID_WHEN_KEYBOARD_APPEARS_BY_DEFAULT()'><b>VERIFY_THAT_USER_ABLE_TO_ENTER_THE_EMAIL_ID_WHEN_KEYBOARD_APPEARS_BY_DEFAULT</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -947,43 +714,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace635610193", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace635610193'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1273958371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1273958371'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1003,47 +753,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_USER_NAVIGATED_INTO_LOGIN_PAGE_AFTER_CLICKED_SUBMIT_BUTTON()'><b>VERIFY_THAT_USER_NAVIGATED_INTO_LOGIN_PAGE_AFTER_CLICKED_SUBMIT_BUTTON</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_USER_LOADED_WITH_OPEN_LOCK_PAGE_ALONG_WITH_CONTROLLER_DETAILS()'><b>VERIFY_THAT_USER_LOADED_WITH_OPEN_LOCK_PAGE_ALONG_WITH_CONTROLLER_DETAILS</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1063,43 +796,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace2022689531", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2022689531'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1718322084", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1718322084'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1119,47 +835,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_USER_NAVIAGETED_INTO_GET_OTP_SCREEN_SUCCESSFULLY()'><b>VERIFY_THAT_USER_NAVIAGETED_INTO_GET_OTP_SCREEN_SUCCESSFULLY</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_LOCK_AUTOMATICALLY_CLOSED_AFTER_CONFIGURED_SECONDS_AND_STATUS_CHANGED_INTO_CLSOED()'><b>VERIFY_THAT_LOCK_AUTOMATICALLY_CLOSED_AFTER_CONFIGURED_SECONDS_AND_STATUS_CHANGED_INTO_CLSOED</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1179,43 +878,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace538667887", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace538667887'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace24039137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace24039137'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1235,47 +917,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_CREATED_ACCESS_IS_LISTED_IN_THE_ACCESS_PAGE()'><b>VERIFY_THAT_CREATED_ACCESS_IS_LISTED_IN_THE_ACCESS_PAGE</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_BLUETOOTH_IS_ENALBED_BY_CLICKING_ON_ALLOW_BUUTON()'><b>VERIFY_THAT_BLUETOOTH_IS_ENALBED_BY_CLICKING_ON_ALLOW_BUUTON</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1295,43 +960,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace281421502", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace281421502'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1724814719", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1724814719'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1351,47 +999,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_SAFELOCK_APP_LOGGED_IN_SUCCESSFULLY_BY_CLICK_ON_SUBMIT_BUTTON()'><b>VERIFY_THAT_SAFELOCK_APP_LOGGED_IN_SUCCESSFULLY_BY_CLICK_ON_SUBMIT_BUTTON</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_USER_NAVIGATED_INTO_LOGIN_PAGE_AFTER_CLICKED_SUBMIT_BUTTON()'><b>VERIFY_THAT_USER_NAVIGATED_INTO_LOGIN_PAGE_AFTER_CLICKED_SUBMIT_BUTTON</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1411,43 +1042,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace379121284", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace379121284'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace422409467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace422409467'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1467,47 +1081,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_LOCK_AUTOMATICALLY_CLOSED_AFTER_CONFIGURED_SECONDS_AND_STATUS_CHANGED_INTO_CLSOED()'><b>VERIFY_THAT_LOCK_AUTOMATICALLY_CLOSED_AFTER_CONFIGURED_SECONDS_AND_STATUS_CHANGED_INTO_CLSOED</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_SAFELOCK_APP_LOGGED_IN_SUCCESSFULLY_BY_CLICK_ON_SUBMIT_BUTTON()'><b>VERIFY_THAT_SAFELOCK_APP_LOGGED_IN_SUCCESSFULLY_BY_CLICK_ON_SUBMIT_BUTTON</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1527,43 +1124,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace406749219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace406749219'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace664091267", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace664091267'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1583,47 +1163,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_USER_ABLE_TO_ENTER_THE_EMAIL_ID_WHEN_KEYBOARD_APPEARS_BY_DEFAULT()'><b>VERIFY_THAT_USER_ABLE_TO_ENTER_THE_EMAIL_ID_WHEN_KEYBOARD_APPEARS_BY_DEFAULT</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_SELECTED_LOCK_IS_SEARCHED_AND_CONNECTED_TO_THE_DEVICE()'><b>VERIFY_THAT_SELECTED_LOCK_IS_SEARCHED_AND_CONNECTED_TO_THE_DEVICE</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1643,43 +1206,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1340848245", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1340848245'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1543146693", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1543146693'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1699,47 +1245,30 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 <tr>
-<td title='Testcases.Safelocklogin.VERIFY_THAT_BLUETOOTH_IS_ENALBED_BY_CLICKING_ON_ALLOW_BUUTON()'><b>VERIFY_THAT_BLUETOOTH_IS_ENALBED_BY_CLICKING_ON_ALLOW_BUUTON</b><br>Test class: Testcases.Safelocklogin</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+<td title='Testcases.AlreadyhaveanOTP.VERIFY_THAT_SAFELOCK_USER_ENTER_THE_ACTIVATION_CODE_ON_ACTIVATION_FIELD()'><b>VERIFY_THAT_SAFELOCK_USER_ENTER_THE_ACTIVATION_CODE_ON_ACTIVATION_FIELD</b><br>Test class: Testcases.AlreadyhaveanOTP</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1759,43 +1288,26 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace50072771", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace50072771'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+</pre></div><a href='#' onClick='toggleBox("stack-trace1493988307", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1493988307'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
 Host info: host: &apos;DESKTOP-LQ6L55O&apos;, ip: &apos;192.168.16.167&apos;
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.24&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}]}]
-Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D, appium:platformName: Android, appium:platformVersion: 12, automationName: UiAutomator2, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:536)
+Command: [null, newSession {capabilities=[Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}]}]
+Capabilities {appium:app: F:\selyek 40.apk, appium:automationName: UiAutomator2, appium:commandTimeout: 600, appium:deviceName: TKW88H9TONSSQG6D, appium:newCommandTimeout: 600, appium:platformName: Android, appium:platformVersion: 12, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
 	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:161)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at Basesetup.BaseSetup.setupMobileDriver(BaseSetup.java:46)
+	at Basesetup.Basesetup.setupMobileDriver(Basesetup.java:59)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1815,31 +1327,9 @@ Capabilities {appium:app: F:\selyek 40.apk, appium:deviceName: TKW88H9TONSSQG6D,
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.IllegalArgumentException: Illegal key values seen in w3c capabilities: [automationName]
-	at org.openqa.selenium.remote.NewSessionPayload.lambda$validate$5(NewSessionPayload.java:163)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:441)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.stream.ReferencePipeline$11$1.accept(ReferencePipeline.java:442)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-	at org.openqa.selenium.remote.NewSessionPayload.validate(NewSessionPayload.java:167)
-	at org.openqa.selenium.remote.NewSessionPayload.&lt;init&gt;(NewSessionPayload.java:70)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:99)
-	at org.openqa.selenium.remote.NewSessionPayload.create(NewSessionPayload.java:84)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:60)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	... 25 more
 </pre></div></td>
 <td>0</td>
-<td>Testcases.Safelocklogin@2eae8e6e</td></tr>
+<td>Testcases.AlreadyhaveanOTP@2eae8e6e</td></tr>
 </table><p>
 </body>
 </html>
