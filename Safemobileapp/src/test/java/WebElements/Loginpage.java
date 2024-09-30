@@ -26,6 +26,7 @@ public WebElement NOKEYBOARD;
 public WebElement Enterpassword;
 @FindBy(xpath ="//android.widget.Button[@content-desc='Login']")
 public WebElement Clicklogin; 
+
 //location and device access
 @FindBy(xpath="//android.widget.Button[@resource-id='com.android.permissioncontroller:id/permission_allow_button']")
 public WebElement bleallowbutton; 

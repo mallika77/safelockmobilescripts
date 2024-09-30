@@ -36,7 +36,7 @@ public static URL url;
             prop = new Properties();
             prop.load(fis);
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e); 	
         }
     }
 

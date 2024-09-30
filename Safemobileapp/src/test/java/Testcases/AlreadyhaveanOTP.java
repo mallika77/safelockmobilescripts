@@ -104,7 +104,8 @@ public class AlreadyhaveanOTP extends Basesetup {
 	public void VERIFY_THAT_CREATED_ACCESS_IS_LISTED_IN_THE_ACCESS_PAGE() throws InterruptedException {
 		Thread.sleep(3000);
 		WebElement accessElement = driver.findElement(AppiumBy.androidUIAutomator(
-				"new UiSelector().description(\"Access Name\ndemolock3\nDate & Time Range\nFri, Sep 13, 2024 12:00 AM - Sat, Sep 13, 2025 11:30 PM\nAvailable Days\nMON\nTUE\nWED\nTHU\nFRI\nSAT\nSUN\")"));
+				"new UiSelector().description('Access Name demolock6 Date & Time Range Mon, Sep 30, 2024 12:00 AM - Tue, Sep 30, 2025 11:30 PM Available Days MON TUE WED THU FRI SAT SUN')"));
+		
 		accessElement.click();
 		System.out.println("Access of the user Clicked successfully!");
 	}

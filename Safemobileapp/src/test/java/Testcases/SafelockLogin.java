@@ -22,7 +22,7 @@ import io.appium.java_client.HidesKeyboard;
 import io.appium.java_client.android.AndroidDriver;							
 							
 public class SafelockLogin extends Basesetup{							
-	private Loginpage login;						
+	 Loginpage login;						
 							
 	@BeforeClass						
 	public void setup() throws Exception {						
@@ -107,8 +107,10 @@ public class SafelockLogin extends Basesetup{
 	@Test(priority = 6, enabled = true)						
 	public void VERIFY_THAT_CREATED_ACCESS_IS_LISTED_IN_THE_ACCESS_PAGE() throws InterruptedException {						
 		Thread.sleep(3000);					
-		WebElement accessElement = driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().description(\"Access Name\ndemolock3\nDate & Time Range\nFri, Sep 13, 2024 12:00 AM - Sat, Sep 13, 2025 11:30 PM\nAvailable Days\nMON\nTUE\nWED\nTHU\nFRI\nSAT\nSUN\")"));
-		accessElement.click();				
+		//WebElement accessElement = driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().description(\"Access Name\ndemolock6\nDate & Time Range\nMon, Sep 30, 2024 12:00 AM - tue, Sep 30, 2025 11:30 PM\nAvailable Days\nMON\nTUE\nWED\nTHU\nFRI\nSAT\nSUN\")"));
+		WebElement accessElement = driver					
+				.findElement(By.xpath("//android.view.View[contains(@content-desc, 'Access Name')]"));		
+		accessElement.click();				                                      
 		System.out.println("Access of the user Clicked successfully!");					
 	}						
 							
@@ -129,7 +131,7 @@ public class SafelockLogin extends Basesetup{
 							
 	@Test(priority = 9, enabled = true)						
 	public void VERIFY_THAT_SELECTED_LOCK_IS_SEARCHED_AND_CONNECTED_TO_THE_DEVICE() throws InterruptedException {						
-		Thread.sleep(3000);					
+		Thread.sleep(2000);					
 		Clickfunction(login.connectbutton);					
 		System.out.println("Controller searched and displayed successfully!");					
 	}						
@@ -161,24 +163,16 @@ public class SafelockLogin extends Basesetup{
 		String[] split = lockStatusData.split("\\s+"); // Split by any whitespace, including new lines					
 							
 		if (split.length >= 2) {					
-			// Construct status (first two words: "Status Closed")				
+			// Construct status (first two words: "Status disabled")				
 			String status = split[0] + " " + split[1];				
 			System.out.println("Current Lock status is: " + status);				
 		} else {					
 			System.out.println("Error: Unable to retrieve the full lock status.");				
 		}					
 							
-		if (split.length >= 4) {					
-			// Construct battery (next two words: "Battery 100%")				
-			String battery = split[2] + " " + split[3];				
-			System.out.println("Current Battery status is: " + battery);				
-		} else {					
-			System.out.println("Error: Unable to retrieve battery details.");				
-		}					
-							
-		if (split.length >= 7) {					
+		if (split.length >= 5) {					
 			// Construct firmware version (next three words: "Firmware Version v1.2.8")				
-			String firmwareversion = split[4] + " " + split[5] + " " + split[6];				
+			String firmwareversion = split[2] + " " + split[3] + " " + split[4];				
 			System.out.println("Firmware details: " + firmwareversion);				
 		} else {					
 			System.out.println("Error: Unable to retrieve firmware details.");				
